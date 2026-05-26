@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Logs and cache
+logs/
+*.log
+.cache/
+.cache*/
+wandb/
+runs/
+
+# Large model/data artifacts
+models/
+processed/
+sft_data/*.jsonl
+hf_upload*/
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+*.npy
+*.npz
+*.jsonl
+
+# Containers
+containers/
+*.sif
+*.sqsh
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
+
+# Temporary files
+*.bak
+tmp_*
