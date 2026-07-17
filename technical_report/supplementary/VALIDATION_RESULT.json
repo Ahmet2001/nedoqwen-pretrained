@@ -1,0 +1,45 @@
+{
+  "status": "pass",
+  "prediction_files": {
+    "predictions/turkishmmlu_sub_pre.jsonl": {
+      "rows": 900,
+      "correct": 163,
+      "accuracy": 0.181111,
+      "benchmark_text_present": false
+    },
+    "predictions/turkishmmlu_sub_label_only.jsonl": {
+      "rows": 900,
+      "correct": 176,
+      "accuracy": 0.195556,
+      "benchmark_text_present": false
+    },
+    "predictions/turkishmmlu_sub_full_repair.jsonl": {
+      "rows": 900,
+      "correct": 189,
+      "accuracy": 0.21,
+      "benchmark_text_present": false
+    },
+    "predictions/tumlu_mini_pre.jsonl": {
+      "rows": 900,
+      "correct": 192,
+      "accuracy": 0.213333,
+      "benchmark_text_present": false
+    },
+    "predictions/tumlu_mini_label_only.jsonl": {
+      "rows": 900,
+      "correct": 243,
+      "accuracy": 0.27,
+      "benchmark_text_present": false
+    },
+    "predictions/tumlu_mini_full_repair.jsonl": {
+      "rows": 900,
+      "correct": 290,
+      "accuracy": 0.322222,
+      "benchmark_text_present": false
+    }
+  },
+  "privacy_scan": "clean",
+  "overlap_scan": "all reported counts are zero",
+  "checkpoint_count": 3,
+  "tokenizer_manifest": "verified"
+}
