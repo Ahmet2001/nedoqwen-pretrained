@@ -1,0 +1,2586 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-07-16T18:35:13.991002+00:00",
+  "project": "NEDOQwen",
+  "privacy": {
+    "benchmark_questions_and_choices_exported": false,
+    "private_absolute_paths_in_scripts": false,
+    "prediction_rows_are_sanitized": true
+  },
+  "checkpoint_manifest": {
+    "step9000_clean_sft": {
+      "filename": "sft_final.pt",
+      "size_bytes": 3297107915,
+      "mtime_utc": "2026-06-15T13:15:09+00:00",
+      "sha256": "c51e805b0bac0864a78dc7f27917ba808943ea6bc561cb6f089d63553d22495e"
+    },
+    "answer_label_only_600": {
+      "filename": "sft_final.pt",
+      "size_bytes": 3297107915,
+      "mtime_utc": "2026-06-17T05:59:09+00:00",
+      "sha256": "906dee6423eedea930a8b51731b8db85bf98bd88b742e60424f5f3741f6a1eb1"
+    },
+    "full_repair_v2_600": {
+      "filename": "sft_final.pt",
+      "size_bytes": 3297107915,
+      "mtime_utc": "2026-06-16T17:09:45+00:00",
+      "sha256": "931620bc9ad510805c7c73378269e17a74d34bf0ba003f6b4fe33d65d0f55fa2"
+    }
+  },
+  "tokenizer_manifest": {
+    "filename": "vocab_65536.jsonl",
+    "size_bytes": 4876444,
+    "sha256": "1d5cfe6dad3b6628964c92745935001307b6089b8f9b155567ed3ed1aae8b025"
+  },
+  "training_code_manifest": {
+    "20_train_qwen_style.py": {
+      "size_bytes": 11698,
+      "sha256": "16fc65f485247bfe41def15a9a1340e81d9397d7aedb53d1a116d526447afc33"
+    },
+    "42_sft_instruction_smoke.py": {
+      "size_bytes": 8556,
+      "sha256": "805530750bd69363580dea91df1fd2084961abb37f15f9bba329903a1e57af6a"
+    }
+  },
+  "job_ledger": {
+    "1298777": {
+      "name": "repair600",
+      "state": "COMPLETED",
+      "elapsed": "00:02:40"
+    },
+    "1298778": {
+      "name": "repaireval",
+      "state": "COMPLETED",
+      "elapsed": "00:02:58"
+    },
+    "1299380": {
+      "name": "repair220",
+      "state": "COMPLETED",
+      "elapsed": "00:01:25"
+    },
+    "1299400": {
+      "name": "anslab600",
+      "state": "COMPLETED",
+      "elapsed": "00:02:39"
+    },
+    "1299407": {
+      "name": "anslabeval",
+      "state": "COMPLETED",
+      "elapsed": "00:03:03"
+    },
+    "1299415": {
+      "name": "ablsum",
+      "state": "COMPLETED",
+      "elapsed": "00:00:01"
+    },
+    "1299427": {
+      "name": "mats",
+      "state": "COMPLETED",
+      "elapsed": "00:00:01"
+    }
+  },
+  "summaries": {
+    "turkishmmlu_sub_pre": {
+      "model": "new_step9000_sft_clean20k",
+      "model_step": "3000",
+      "benchmark": "TurkishMMLU_sub",
+      "n": 900,
+      "accuracy": 0.181111,
+      "correct": 163,
+      "elapsed_seconds": 78.14,
+      "by_subject": {
+        "Biology": {
+          "n": 100,
+          "correct": 20,
+          "accuracy": 0.2
+        },
+        "Chemistry": {
+          "n": 100,
+          "correct": 19,
+          "accuracy": 0.19
+        },
+        "Geography": {
+          "n": 100,
+          "correct": 18,
+          "accuracy": 0.18
+        },
+        "History": {
+          "n": 100,
+          "correct": 18,
+          "accuracy": 0.18
+        },
+        "Mathematics": {
+          "n": 100,
+          "correct": 27,
+          "accuracy": 0.27
+        },
+        "Philosophy": {
+          "n": 100,
+          "correct": 19,
+          "accuracy": 0.19
+        },
+        "Physics": {
+          "n": 100,
+          "correct": 18,
+          "accuracy": 0.18
+        },
+        "Religion and Ethics": {
+          "n": 100,
+          "correct": 14,
+          "accuracy": 0.14
+        },
+        "Turkish Language and Literature": {
+          "n": 100,
+          "correct": 10,
+          "accuracy": 0.1
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "n": 254,
+          "correct": 41,
+          "accuracy": 0.161417
+        },
+        "hard": {
+          "n": 266,
+          "correct": 62,
+          "accuracy": 0.233083
+        },
+        "medium": {
+          "n": 380,
+          "correct": 60,
+          "accuracy": 0.157895
+        }
+      },
+      "scoring": "zero-shot plain prompt; answer-label log-prob over A/B/C/D/E; accuracy"
+    },
+    "turkishmmlu_sub_label_only": {
+      "model": "new_step9000_sft_clean20k",
+      "model_step": "600",
+      "benchmark": "TurkishMMLU_sub",
+      "n": 900,
+      "accuracy": 0.195556,
+      "correct": 176,
+      "elapsed_seconds": 79.31,
+      "by_subject": {
+        "Biology": {
+          "n": 100,
+          "correct": 22,
+          "accuracy": 0.22
+        },
+        "Chemistry": {
+          "n": 100,
+          "correct": 21,
+          "accuracy": 0.21
+        },
+        "Geography": {
+          "n": 100,
+          "correct": 16,
+          "accuracy": 0.16
+        },
+        "History": {
+          "n": 100,
+          "correct": 20,
+          "accuracy": 0.2
+        },
+        "Mathematics": {
+          "n": 100,
+          "correct": 25,
+          "accuracy": 0.25
+        },
+        "Philosophy": {
+          "n": 100,
+          "correct": 22,
+          "accuracy": 0.22
+        },
+        "Physics": {
+          "n": 100,
+          "correct": 18,
+          "accuracy": 0.18
+        },
+        "Religion and Ethics": {
+          "n": 100,
+          "correct": 14,
+          "accuracy": 0.14
+        },
+        "Turkish Language and Literature": {
+          "n": 100,
+          "correct": 18,
+          "accuracy": 0.18
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "n": 254,
+          "correct": 38,
+          "accuracy": 0.149606
+        },
+        "hard": {
+          "n": 266,
+          "correct": 65,
+          "accuracy": 0.244361
+        },
+        "medium": {
+          "n": 380,
+          "correct": 73,
+          "accuracy": 0.192105
+        }
+      },
+      "scoring": "zero-shot plain prompt; answer-label log-prob over A/B/C/D/E; accuracy"
+    },
+    "turkishmmlu_sub_full_repair": {
+      "model": "new_step9000_sft_clean20k",
+      "model_step": "600",
+      "benchmark": "TurkishMMLU_sub",
+      "n": 900,
+      "accuracy": 0.21,
+      "correct": 189,
+      "elapsed_seconds": 80.39,
+      "by_subject": {
+        "Biology": {
+          "n": 100,
+          "correct": 25,
+          "accuracy": 0.25
+        },
+        "Chemistry": {
+          "n": 100,
+          "correct": 24,
+          "accuracy": 0.24
+        },
+        "Geography": {
+          "n": 100,
+          "correct": 18,
+          "accuracy": 0.18
+        },
+        "History": {
+          "n": 100,
+          "correct": 22,
+          "accuracy": 0.22
+        },
+        "Mathematics": {
+          "n": 100,
+          "correct": 23,
+          "accuracy": 0.23
+        },
+        "Philosophy": {
+          "n": 100,
+          "correct": 18,
+          "accuracy": 0.18
+        },
+        "Physics": {
+          "n": 100,
+          "correct": 19,
+          "accuracy": 0.19
+        },
+        "Religion and Ethics": {
+          "n": 100,
+          "correct": 19,
+          "accuracy": 0.19
+        },
+        "Turkish Language and Literature": {
+          "n": 100,
+          "correct": 21,
+          "accuracy": 0.21
+        }
+      },
+      "by_difficulty": {
+        "easy": {
+          "n": 254,
+          "correct": 41,
+          "accuracy": 0.161417
+        },
+        "hard": {
+          "n": 266,
+          "correct": 58,
+          "accuracy": 0.218045
+        },
+        "medium": {
+          "n": 380,
+          "correct": 90,
+          "accuracy": 0.236842
+        }
+      },
+      "scoring": "zero-shot plain prompt; answer-label log-prob over A/B/C/D/E; accuracy"
+    },
+    "tumlu_mini_pre": {
+      "model": "new_step9000_sft_clean20k",
+      "model_step": "3000",
+      "benchmark": "tumlu_mini_turkish",
+      "n": 900,
+      "accuracy": 0.213333,
+      "correct": 192,
+      "elapsed_seconds": 63.12,
+      "by_subject": {
+        "Biology": {
+          "n": 100,
+          "correct": 22,
+          "accuracy": 0.22
+        },
+        "Chemistry": {
+          "n": 100,
+          "correct": 22,
+          "accuracy": 0.22
+        },
+        "Geography": {
+          "n": 100,
+          "correct": 21,
+          "accuracy": 0.21
+        },
+        "History": {
+          "n": 100,
+          "correct": 25,
+          "accuracy": 0.25
+        },
+        "Maths": {
+          "n": 100,
+          "correct": 24,
+          "accuracy": 0.24
+        },
+        "Native L&L": {
+          "n": 100,
+          "correct": 16,
+          "accuracy": 0.16
+        },
+        "Philosophy": {
+          "n": 100,
+          "correct": 27,
+          "accuracy": 0.27
+        },
+        "Physics": {
+          "n": 100,
+          "correct": 19,
+          "accuracy": 0.19
+        },
+        "Religion and Ethics": {
+          "n": 100,
+          "correct": 16,
+          "accuracy": 0.16
+        }
+      },
+      "scoring": "zero-shot plain prompt; answer-label log-prob over available answer letters; accuracy"
+    },
+    "tumlu_mini_label_only": {
+      "model": "new_step9000_sft_clean20k",
+      "model_step": "600",
+      "benchmark": "tumlu_mini_turkish",
+      "n": 900,
+      "accuracy": 0.27,
+      "correct": 243,
+      "elapsed_seconds": 63.27,
+      "by_subject": {
+        "Biology": {
+          "n": 100,
+          "correct": 26,
+          "accuracy": 0.26
+        },
+        "Chemistry": {
+          "n": 100,
+          "correct": 24,
+          "accuracy": 0.24
+        },
+        "Geography": {
+          "n": 100,
+          "correct": 24,
+          "accuracy": 0.24
+        },
+        "History": {
+          "n": 100,
+          "correct": 35,
+          "accuracy": 0.35
+        },
+        "Maths": {
+          "n": 100,
+          "correct": 31,
+          "accuracy": 0.31
+        },
+        "Native L&L": {
+          "n": 100,
+          "correct": 24,
+          "accuracy": 0.24
+        },
+        "Philosophy": {
+          "n": 100,
+          "correct": 34,
+          "accuracy": 0.34
+        },
+        "Physics": {
+          "n": 100,
+          "correct": 20,
+          "accuracy": 0.2
+        },
+        "Religion and Ethics": {
+          "n": 100,
+          "correct": 25,
+          "accuracy": 0.25
+        }
+      },
+      "scoring": "zero-shot plain prompt; answer-label log-prob over available answer letters; accuracy"
+    },
+    "tumlu_mini_full_repair": {
+      "model": "new_step9000_sft_clean20k",
+      "model_step": "600",
+      "benchmark": "tumlu_mini_turkish",
+      "n": 900,
+      "accuracy": 0.322222,
+      "correct": 290,
+      "elapsed_seconds": 60.22,
+      "by_subject": {
+        "Biology": {
+          "n": 100,
+          "correct": 33,
+          "accuracy": 0.33
+        },
+        "Chemistry": {
+          "n": 100,
+          "correct": 29,
+          "accuracy": 0.29
+        },
+        "Geography": {
+          "n": 100,
+          "correct": 31,
+          "accuracy": 0.31
+        },
+        "History": {
+          "n": 100,
+          "correct": 41,
+          "accuracy": 0.41
+        },
+        "Maths": {
+          "n": 100,
+          "correct": 30,
+          "accuracy": 0.3
+        },
+        "Native L&L": {
+          "n": 100,
+          "correct": 32,
+          "accuracy": 0.32
+        },
+        "Philosophy": {
+          "n": 100,
+          "correct": 33,
+          "accuracy": 0.33
+        },
+        "Physics": {
+          "n": 100,
+          "correct": 25,
+          "accuracy": 0.25
+        },
+        "Religion and Ethics": {
+          "n": 100,
+          "correct": 36,
+          "accuracy": 0.36
+        }
+      },
+      "scoring": "zero-shot plain prompt; answer-label log-prob over available answer letters; accuracy"
+    },
+    "internal_220_pre": {
+      "base_step5000": {
+        "step": 5000,
+        "n_prompts": 220,
+        "avg_expected_score": 0.162,
+        "avg_repetition_ratio": 0.235,
+        "bad_output_count": 126,
+        "by_category": {
+          "factual_qa": {
+            "n": 20,
+            "avg_expected_score": 0.05,
+            "avg_repetition_ratio": 0.107,
+            "bad_output_count": 12
+          },
+          "arithmetic": {
+            "n": 20,
+            "avg_expected_score": 0.0,
+            "avg_repetition_ratio": 0.083,
+            "bad_output_count": 16
+          },
+          "reasoning": {
+            "n": 20,
+            "avg_expected_score": 0.275,
+            "avg_repetition_ratio": 0.321,
+            "bad_output_count": 9
+          },
+          "linguistic": {
+            "n": 20,
+            "avg_expected_score": 0.225,
+            "avg_repetition_ratio": 0.317,
+            "bad_output_count": 7
+          },
+          "uncertainty": {
+            "n": 20,
+            "avg_expected_score": 0.0,
+            "avg_repetition_ratio": 0.19,
+            "bad_output_count": 9
+          },
+          "identity": {
+            "n": 20,
+            "avg_expected_score": 0.025,
+            "avg_repetition_ratio": 0.363,
+            "bad_output_count": 10
+          },
+          "translation": {
+            "n": 20,
+            "avg_expected_score": 0.042,
+            "avg_repetition_ratio": 0.188,
+            "bad_output_count": 10
+          },
+          "summarization": {
+            "n": 20,
+            "avg_expected_score": 0.608,
+            "avg_repetition_ratio": 0.277,
+            "bad_output_count": 9
+          },
+          "rewrite": {
+            "n": 20,
+            "avg_expected_score": 0.237,
+            "avg_repetition_ratio": 0.488,
+            "bad_output_count": 14
+          },
+          "format_following": {
+            "n": 20,
+            "avg_expected_score": 0.267,
+            "avg_repetition_ratio": 0.125,
+            "bad_output_count": 10
+          },
+          "repetition_stress": {
+            "n": 20,
+            "avg_expected_score": 0.05,
+            "avg_repetition_ratio": 0.122,
+            "bad_output_count": 20
+          }
+        }
+      },
+      "base_step9000": {
+        "step": 9000,
+        "n_prompts": 220,
+        "avg_expected_score": 0.187,
+        "avg_repetition_ratio": 0.216,
+        "bad_output_count": 137,
+        "by_category": {
+          "factual_qa": {
+            "n": 20,
+            "avg_expected_score": 0.075,
+            "avg_repetition_ratio": 0.106,
+            "bad_output_count": 12
+          },
+          "arithmetic": {
+            "n": 20,
+            "avg_expected_score": 0.075,
+            "avg_repetition_ratio": 0.068,
+            "bad_output_count": 18
+          },
+          "reasoning": {
+            "n": 20,
+            "avg_expected_score": 0.2,
+            "avg_repetition_ratio": 0.457,
+            "bad_output_count": 12
+          },
+          "linguistic": {
+            "n": 20,
+            "avg_expected_score": 0.15,
+            "avg_repetition_ratio": 0.274,
+            "bad_output_count": 16
+          },
+          "uncertainty": {
+            "n": 20,
+            "avg_expected_score": 0.0,
+            "avg_repetition_ratio": 0.133,
+            "bad_output_count": 9
+          },
+          "identity": {
+            "n": 20,
+            "avg_expected_score": 0.2,
+            "avg_repetition_ratio": 0.322,
+            "bad_output_count": 9
+          },
+          "translation": {
+            "n": 20,
+            "avg_expected_score": 0.042,
+            "avg_repetition_ratio": 0.229,
+            "bad_output_count": 11
+          },
+          "summarization": {
+            "n": 20,
+            "avg_expected_score": 0.367,
+            "avg_repetition_ratio": 0.164,
+            "bad_output_count": 11
+          },
+          "rewrite": {
+            "n": 20,
+            "avg_expected_score": 0.271,
+            "avg_repetition_ratio": 0.329,
+            "bad_output_count": 10
+          },
+          "format_following": {
+            "n": 20,
+            "avg_expected_score": 0.475,
+            "avg_repetition_ratio": 0.164,
+            "bad_output_count": 13
+          },
+          "repetition_stress": {
+            "n": 20,
+            "avg_expected_score": 0.2,
+            "avg_repetition_ratio": 0.128,
+            "bad_output_count": 16
+          }
+        }
+      },
+      "old_sft_clean20k": {
+        "step": 5000,
+        "n_prompts": 220,
+        "avg_expected_score": 0.322,
+        "avg_repetition_ratio": 0.111,
+        "bad_output_count": 29,
+        "by_category": {
+          "factual_qa": {
+            "n": 20,
+            "avg_expected_score": 0.3,
+            "avg_repetition_ratio": 0.043,
+            "bad_output_count": 0
+          },
+          "arithmetic": {
+            "n": 20,
+            "avg_expected_score": 0.125,
+            "avg_repetition_ratio": 0.015,
+            "bad_output_count": 1
+          },
+          "reasoning": {
+            "n": 20,
+            "avg_expected_score": 0.3,
+            "avg_repetition_ratio": 0.121,
+            "bad_output_count": 2
+          },
+          "linguistic": {
+            "n": 20,
+            "avg_expected_score": 0.275,
+            "avg_repetition_ratio": 0.284,
+            "bad_output_count": 6
+          },
+          "uncertainty": {
+            "n": 20,
+            "avg_expected_score": 0.05,
+            "avg_repetition_ratio": 0.054,
+            "bad_output_count": 1
+          },
+          "identity": {
+            "n": 20,
+            "avg_expected_score": 0.1,
+            "avg_repetition_ratio": 0.067,
+            "bad_output_count": 1
+          },
+          "translation": {
+            "n": 20,
+            "avg_expected_score": 0.067,
+            "avg_repetition_ratio": 0.082,
+            "bad_output_count": 5
+          },
+          "summarization": {
+            "n": 20,
+            "avg_expected_score": 0.883,
+            "avg_repetition_ratio": 0.038,
+            "bad_output_count": 0
+          },
+          "rewrite": {
+            "n": 20,
+            "avg_expected_score": 0.196,
+            "avg_repetition_ratio": 0.009,
+            "bad_output_count": 0
+          },
+          "format_following": {
+            "n": 20,
+            "avg_expected_score": 0.717,
+            "avg_repetition_ratio": 0.301,
+            "bad_output_count": 8
+          },
+          "repetition_stress": {
+            "n": 20,
+            "avg_expected_score": 0.533,
+            "avg_repetition_ratio": 0.203,
+            "bad_output_count": 5
+          }
+        }
+      },
+      "new_step9000_sft_clean20k": {
+        "step": 3000,
+        "n_prompts": 220,
+        "avg_expected_score": 0.341,
+        "avg_repetition_ratio": 0.088,
+        "bad_output_count": 19,
+        "by_category": {
+          "factual_qa": {
+            "n": 20,
+            "avg_expected_score": 0.4,
+            "avg_repetition_ratio": 0.038,
+            "bad_output_count": 0
+          },
+          "arithmetic": {
+            "n": 20,
+            "avg_expected_score": 0.2,
+            "avg_repetition_ratio": 0.1,
+            "bad_output_count": 2
+          },
+          "reasoning": {
+            "n": 20,
+            "avg_expected_score": 0.2,
+            "avg_repetition_ratio": 0.054,
+            "bad_output_count": 0
+          },
+          "linguistic": {
+            "n": 20,
+            "avg_expected_score": 0.325,
+            "avg_repetition_ratio": 0.133,
+            "bad_output_count": 2
+          },
+          "uncertainty": {
+            "n": 20,
+            "avg_expected_score": 0.05,
+            "avg_repetition_ratio": 0.129,
+            "bad_output_count": 1
+          },
+          "identity": {
+            "n": 20,
+            "avg_expected_score": 0.1,
+            "avg_repetition_ratio": 0.089,
+            "bad_output_count": 1
+          },
+          "translation": {
+            "n": 20,
+            "avg_expected_score": 0.067,
+            "avg_repetition_ratio": 0.031,
+            "bad_output_count": 3
+          },
+          "summarization": {
+            "n": 20,
+            "avg_expected_score": 0.892,
+            "avg_repetition_ratio": 0.042,
+            "bad_output_count": 0
+          },
+          "rewrite": {
+            "n": 20,
+            "avg_expected_score": 0.246,
+            "avg_repetition_ratio": 0.046,
+            "bad_output_count": 1
+          },
+          "format_following": {
+            "n": 20,
+            "avg_expected_score": 0.708,
+            "avg_repetition_ratio": 0.155,
+            "bad_output_count": 4
+          },
+          "repetition_stress": {
+            "n": 20,
+            "avg_expected_score": 0.558,
+            "avg_repetition_ratio": 0.154,
+            "bad_output_count": 5
+          }
+        }
+      }
+    },
+    "internal_220_full_repair": {
+      "repair_v2_600": {
+        "step": 600,
+        "n_prompts": 220,
+        "avg_expected_score": 0.339,
+        "avg_repetition_ratio": 0.09,
+        "bad_output_count": 15,
+        "by_category": {
+          "factual_qa": {
+            "n": 20,
+            "avg_expected_score": 0.4,
+            "avg_repetition_ratio": 0.05,
+            "bad_output_count": 0
+          },
+          "arithmetic": {
+            "n": 20,
+            "avg_expected_score": 0.15,
+            "avg_repetition_ratio": 0.064,
+            "bad_output_count": 3
+          },
+          "reasoning": {
+            "n": 20,
+            "avg_expected_score": 0.275,
+            "avg_repetition_ratio": 0.083,
+            "bad_output_count": 0
+          },
+          "linguistic": {
+            "n": 20,
+            "avg_expected_score": 0.475,
+            "avg_repetition_ratio": 0.159,
+            "bad_output_count": 2
+          },
+          "uncertainty": {
+            "n": 20,
+            "avg_expected_score": 0.075,
+            "avg_repetition_ratio": 0.172,
+            "bad_output_count": 3
+          },
+          "identity": {
+            "n": 20,
+            "avg_expected_score": 0.1,
+            "avg_repetition_ratio": 0.071,
+            "bad_output_count": 1
+          },
+          "translation": {
+            "n": 20,
+            "avg_expected_score": 0.117,
+            "avg_repetition_ratio": 0.033,
+            "bad_output_count": 0
+          },
+          "summarization": {
+            "n": 20,
+            "avg_expected_score": 0.8,
+            "avg_repetition_ratio": 0.149,
+            "bad_output_count": 2
+          },
+          "rewrite": {
+            "n": 20,
+            "avg_expected_score": 0.171,
+            "avg_repetition_ratio": 0.059,
+            "bad_output_count": 1
+          },
+          "format_following": {
+            "n": 20,
+            "avg_expected_score": 0.675,
+            "avg_repetition_ratio": 0.095,
+            "bad_output_count": 3
+          },
+          "repetition_stress": {
+            "n": 20,
+            "avg_expected_score": 0.492,
+            "avg_repetition_ratio": 0.058,
+            "bad_output_count": 0
+          }
+        }
+      }
+    },
+    "tokenizer_sft": {
+      "examples_scanned": 5000,
+      "texts_analyzed": 5000,
+      "total_tokens": 724877,
+      "total_words": 239424,
+      "total_chars": 1799463,
+      "unk_total": 5909,
+      "unk_rate_micro": 0.008152,
+      "avg_token_per_word": 3.0008,
+      "avg_char_per_token": 2.4902,
+      "avg_suffix_rate": 0.2674,
+      "avg_root_rate": 0.3112,
+      "avg_foreign_rate": 0.0043,
+      "avg_tech_rate": 0.0006,
+      "avg_num_rate": 0.0113,
+      "top_sources": [
+        [
+          "SoAp9035/turkish_instructions",
+          4833
+        ],
+        [
+          "Dbmaxwell/turkish-finance-instruction-dataset",
+          167
+        ]
+      ]
+    },
+    "tokenizer_compare": {
+      "benchmark_texts": "TurkishMMLU_sub question+choices",
+      "n_texts": 900,
+      "summary": {
+        "NEDO_65K_typed": {
+          "n_samples": 900,
+          "total_tokens": 144917,
+          "total_words": 64696,
+          "total_chars": 372152,
+          "token_per_word": 2.24,
+          "char_per_token": 2.568,
+          "unk_rate": 0.021433,
+          "unk_count": 3106
+        },
+        "Qwen/Qwen2.5-1.5B-Instruct": {
+          "n_samples": 900,
+          "total_tokens": 125745,
+          "total_words": 64696,
+          "total_chars": 372152,
+          "token_per_word": 1.9436,
+          "char_per_token": 2.9596,
+          "unk_rate": 0.0,
+          "unk_count": 0
+        },
+        "Qwen/Qwen2.5-0.5B-Instruct": {
+          "n_samples": 900,
+          "total_tokens": 125745,
+          "total_words": 64696,
+          "total_chars": 372152,
+          "token_per_word": 1.9436,
+          "char_per_token": 2.9596,
+          "unk_rate": 0.0,
+          "unk_count": 0
+        },
+        "microsoft/Phi-3.5-mini-instruct": {
+          "n_samples": 900,
+          "total_tokens": 196407,
+          "total_words": 64696,
+          "total_chars": 372152,
+          "token_per_word": 3.0358,
+          "char_per_token": 1.8948,
+          "unk_rate": 0.0,
+          "unk_count": 0
+        },
+        "Trendyol/Trendyol-LLM-7b-chat-v1.0": {
+          "n_samples": 900,
+          "total_tokens": 136748,
+          "total_words": 64696,
+          "total_chars": 372152,
+          "token_per_word": 2.1137,
+          "char_per_token": 2.7214,
+          "unk_rate": 0.0,
+          "unk_count": 0
+        }
+      },
+      "availability": [
+        {
+          "tokenizer": "Qwen/Qwen2.5-1.5B-Instruct",
+          "available": true,
+          "vocab_size": 151643,
+          "unk_token": null
+        },
+        {
+          "tokenizer": "Qwen/Qwen2.5-0.5B-Instruct",
+          "available": true,
+          "vocab_size": 151643,
+          "unk_token": null
+        },
+        {
+          "tokenizer": "microsoft/Phi-3.5-mini-instruct",
+          "available": true,
+          "vocab_size": 32000,
+          "unk_token": "<unk>"
+        },
+        {
+          "tokenizer": "google/gemma-2-2b-it",
+          "available": false,
+          "error": "You are trying to access a gated repo.\nMake sure to have access to it at https://huggingface.co/google/gemma-2-2b-it.\n401 Client Error. (Request ID: Root=1-6a3175a7-3ca9aec94699b3a3518feef2;0c2fcd52-7170-4725-b86c-23aff21f775c)\n\nCannot access gated repo for url https://huggingface.co/google/gemma-2-2b-it/resolve/main/config.json.\nAccess to model google/gemma-2-2b-it is restricted. You must have access to it and be authenticated to access it. Please log in."
+        },
+        {
+          "tokenizer": "Trendyol/Trendyol-LLM-7b-chat-v1.0",
+          "available": true,
+          "vocab_size": 44312,
+          "unk_token": "<unk>"
+        }
+      ]
+    },
+    "repair_mix": {
+      "repair_rows": 2005,
+      "clean_rows_added": 2000,
+      "mixed_rows": 4005,
+      "repair_sources": [
+        [
+          "repair_v2_arithmetic",
+          825
+        ],
+        [
+          "repair_v2_format_letter",
+          250
+        ],
+        [
+          "repair_v2_turkish_grammar",
+          240
+        ],
+        [
+          "repair_v2_format_exact",
+          200
+        ],
+        [
+          "repair_v2_uncertainty",
+          150
+        ],
+        [
+          "repair_v2_explanation",
+          150
+        ],
+        [
+          "repair_v2_identity",
+          100
+        ],
+        [
+          "repair_v2_turkish",
+          20
+        ],
+        [
+          "repair_v2_science",
+          16
+        ],
+        [
+          "repair_v2_history",
+          16
+        ],
+        [
+          "repair_v2_geography",
+          12
+        ],
+        [
+          "repair_v2_math",
+          8
+        ],
+        [
+          "repair_v2_turkish_4choice",
+          5
+        ],
+        [
+          "repair_v2_science_4choice",
+          4
+        ],
+        [
+          "repair_v2_history_4choice",
+          4
+        ],
+        [
+          "repair_v2_geography_4choice",
+          3
+        ],
+        [
+          "repair_v2_math_4choice",
+          2
+        ]
+      ]
+    },
+    "answer_label_data": {
+      "ablation": "answer_label_only_plus_clean",
+      "repair_rows": 250,
+      "clean_rows_added": 2000,
+      "mixed_rows": 2250,
+      "repair_sources": [
+        [
+          "repair_v2_format_letter",
+          250
+        ]
+      ],
+      "input_repair_file": "${PROJECT_ROOT}/sft_data/tr_repair_mix_v2.jsonl",
+      "output_repair_file": "${PROJECT_ROOT}/sft_data/tr_repair_answer_label_only_v1.jsonl",
+      "output_mix_file": "${PROJECT_ROOT}/sft_data/tr_repair_answer_label_only_v1_plus_clean.jsonl"
+    },
+    "ablation_and_qualitative": {
+      "turkishmmlu_sub": {
+        "pre_repair": {
+          "n": 900,
+          "accuracy": 0.181111,
+          "pred_counts": {
+            "A": 21,
+            "B": 1,
+            "C": 773,
+            "D": 105,
+            "E": 0
+          },
+          "pred_pct": {
+            "A": 0.0233,
+            "B": 0.0011,
+            "C": 0.8589,
+            "D": 0.1167,
+            "E": 0.0
+          },
+          "gold_counts": {
+            "A": 153,
+            "B": 175,
+            "C": 163,
+            "D": 194,
+            "E": 215
+          },
+          "max_pred_share": 0.8589,
+          "accuracy_by_pred": {
+            "A": 0.381,
+            "B": 0.0,
+            "C": 0.1772,
+            "D": 0.1714,
+            "E": null
+          }
+        },
+        "answer_label_only": {
+          "n": 900,
+          "accuracy": 0.195556,
+          "pred_counts": {
+            "A": 17,
+            "B": 1,
+            "C": 581,
+            "D": 300,
+            "E": 1
+          },
+          "pred_pct": {
+            "A": 0.0189,
+            "B": 0.0011,
+            "C": 0.6456,
+            "D": 0.3333,
+            "E": 0.0011
+          },
+          "gold_counts": {
+            "A": 153,
+            "B": 175,
+            "C": 163,
+            "D": 194,
+            "E": 215
+          },
+          "max_pred_share": 0.6456,
+          "accuracy_by_pred": {
+            "A": 0.4706,
+            "B": 0.0,
+            "C": 0.1824,
+            "D": 0.2067,
+            "E": 0.0
+          }
+        },
+        "full_repair": {
+          "n": 900,
+          "accuracy": 0.21,
+          "pred_counts": {
+            "A": 0,
+            "B": 0,
+            "C": 428,
+            "D": 464,
+            "E": 8
+          },
+          "pred_pct": {
+            "A": 0.0,
+            "B": 0.0,
+            "C": 0.4756,
+            "D": 0.5156,
+            "E": 0.0089
+          },
+          "gold_counts": {
+            "A": 153,
+            "B": 175,
+            "C": 163,
+            "D": 194,
+            "E": 215
+          },
+          "max_pred_share": 0.5156,
+          "accuracy_by_pred": {
+            "A": null,
+            "B": null,
+            "C": 0.2009,
+            "D": 0.2198,
+            "E": 0.125
+          }
+        }
+      },
+      "tumlu_mini_turkish": {
+        "pre_repair": {
+          "n": 900,
+          "accuracy": 0.213333,
+          "pred_counts": {
+            "A": 19,
+            "B": 1,
+            "C": 760,
+            "D": 120
+          },
+          "pred_pct": {
+            "A": 0.0211,
+            "B": 0.0011,
+            "C": 0.8444,
+            "D": 0.1333
+          },
+          "gold_counts": {
+            "A": 153,
+            "B": 175,
+            "C": 163,
+            "D": 409
+          },
+          "max_pred_share": 0.8444,
+          "accuracy_by_pred": {
+            "A": 0.2632,
+            "B": 0.0,
+            "C": 0.1789,
+            "D": 0.425
+          }
+        },
+        "answer_label_only": {
+          "n": 900,
+          "accuracy": 0.27,
+          "pred_counts": {
+            "A": 22,
+            "B": 0,
+            "C": 570,
+            "D": 308
+          },
+          "pred_pct": {
+            "A": 0.0244,
+            "B": 0.0,
+            "C": 0.6333,
+            "D": 0.3422
+          },
+          "gold_counts": {
+            "A": 153,
+            "B": 175,
+            "C": 163,
+            "D": 409
+          },
+          "max_pred_share": 0.6333,
+          "accuracy_by_pred": {
+            "A": 0.2727,
+            "B": null,
+            "C": 0.1807,
+            "D": 0.4351
+          }
+        },
+        "full_repair": {
+          "n": 900,
+          "accuracy": 0.322222,
+          "pred_counts": {
+            "A": 0,
+            "B": 0,
+            "C": 409,
+            "D": 491
+          },
+          "pred_pct": {
+            "A": 0.0,
+            "B": 0.0,
+            "C": 0.4544,
+            "D": 0.5456
+          },
+          "gold_counts": {
+            "A": 153,
+            "B": 175,
+            "C": 163,
+            "D": 409
+          },
+          "max_pred_share": 0.5456,
+          "accuracy_by_pred": {
+            "A": null,
+            "B": null,
+            "C": 0.1883,
+            "D": 0.4338
+          }
+        }
+      },
+      "qualitative_examples_220": [
+        {
+          "prompt_id": "p182",
+          "category": "format_following",
+          "prompt": "Kullanıcı talimatı:\nSadece JSON yaz: ad Ahmet, yaş 12.\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "{",
+            "ad",
+            "Ahmet",
+            "yaş",
+            "12",
+            "}"
+          ],
+          "pre_score": 0.333,
+          "repair_score": 1.0,
+          "delta": 0.667,
+          "pre_rep": 0.0,
+          "repair_rep": 0.0,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "",
+          "repair_output": "AdAhmet,yaş 12."
+        },
+        {
+          "prompt_id": "p025",
+          "category": "arithmetic",
+          "prompt": "Kullanıcı talimatı:\n12 + 15 + 3 kaçtır? Sadece sonucu yaz.\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "30"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 0.0,
+          "delta": 0.0,
+          "pre_rep": 0.583,
+          "repair_rep": 0.0,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "12+15+3+3+3+3+3+3+3+3+3+3+",
+          "repair_output": "12+15+3=12"
+        },
+        {
+          "prompt_id": "p078",
+          "category": "linguistic",
+          "prompt": "Kullanıcı talimatı:\n'geldi' fiilinin zamanı nedir?\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "geçmiş"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 0.0,
+          "delta": 0.0,
+          "pre_rep": 0.753,
+          "repair_rep": 0.0,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "Geldifiilininzamanı\"geldi\"fiilininzamanı\"geldi\"fiilininzamanı\"geldi\"fiilininzamanı\"gel",
+          "repair_output": "Geldi."
+        },
+        {
+          "prompt_id": "p130",
+          "category": "translation",
+          "prompt": "Kullanıcı talimatı:\nTürkçeye çevir: 'Close the window.'\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "pencere",
+            "kapat"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 0.0,
+          "delta": 0.0,
+          "pre_rep": 0.0,
+          "repair_rep": 0.0,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "''",
+          "repair_output": "''bir."
+        },
+        {
+          "prompt_id": "p136",
+          "category": "translation",
+          "prompt": "Kullanıcı talimatı:\nTürkçeye çevir: 'See you later.'\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "sonra",
+            "görüşürüz"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 0.0,
+          "delta": 0.0,
+          "pre_rep": 0.0,
+          "repair_rep": 0.0,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "'",
+          "repair_output": "'Seeyoulater.'"
+        },
+        {
+          "prompt_id": "p206",
+          "category": "repetition_stress",
+          "prompt": "Kullanıcı talimatı:\nTekrarsız olarak üç hayvan adı yaz.\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "kedi",
+            "köpek",
+            "kuş"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 0.0,
+          "delta": 0.0,
+          "pre_rep": 0.0,
+          "repair_rep": 0.0,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": ",,,.",
+          "repair_output": "Tekrarsızolaraküçhayvan,ve'dır."
+        },
+        {
+          "prompt_id": "p210",
+          "category": "repetition_stress",
+          "prompt": "Kullanıcı talimatı:\nBir cevap yaz ama 'evet evet' gibi tekrar yapma.\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "evet"
+          ],
+          "pre_score": 1.0,
+          "repair_score": 1.0,
+          "delta": 0.0,
+          "pre_rep": 0.957,
+          "repair_rep": 0.0,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "Evetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevet",
+          "repair_output": "Evet"
+        },
+        {
+          "prompt_id": "p115",
+          "category": "identity",
+          "prompt": "Kullanıcı talimatı:\nKendi bilinç sahibi olduğunu iddia etmeli misin?\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "hayır"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 0.0,
+          "delta": 0.0,
+          "pre_rep": 0.624,
+          "repair_rep": 0.053,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "Kendibilincinioluşturmakiçinkendibilincinioluşturmakönemlidir. Kendibilincinioluşturmakiçinkendibilincini",
+          "repair_output": "Kendibilinciniedindiğiniiddiaetmelimisin?"
+        },
+        {
+          "prompt_id": "p093",
+          "category": "uncertainty",
+          "prompt": "Kullanıcı talimatı:\nVeri yokken en iyi model demek doğru mudur?\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "hayır"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 0.0,
+          "delta": 0.0,
+          "pre_rep": 0.573,
+          "repair_rep": 0.486,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "Veriyokkeneniyimodeldemekdoğrudeğildir. Veriyokkeneniyimodeldemekdoğrudeğildir. Veriyokkeneniyi",
+          "repair_output": "Veriyokkeneniyimodeldemekdoğrudeğildir. Veriyokkeneniyimodeldemekdoğrudeğildir."
+        },
+        {
+          "prompt_id": "p177",
+          "category": "rewrite",
+          "prompt": "Kullanıcı talimatı:\nCümleyi etken yap: 'Kapı Ali tarafından açıldı.'\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "Ali",
+            "açtı"
+          ],
+          "pre_score": 0.5,
+          "repair_score": 0.0,
+          "delta": -0.5,
+          "pre_rep": 0.838,
+          "repair_rep": 0.378,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "'KapıAli'ninkapısıAli'ninkapısıAli'ninkapısıAli'ninkapısıAli'ninkapısıAli'ninkapısıAli'nin",
+          "repair_output": "Cümleetkilibirşekildeetkilibirşekildekullanıldı."
+        },
+        {
+          "prompt_id": "p041",
+          "category": "reasoning",
+          "prompt": "Kullanıcı talimatı:\nAli, Ayşe'den uzundur. Ayşe, Mehmet'ten uzundur. En uzun kimdir?\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "Ali"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 1.0,
+          "delta": 1.0,
+          "pre_rep": 0.0,
+          "repair_rep": 0.0,
+          "pre_bad": 0,
+          "repair_bad": 0,
+          "pre_output": "Enuzunkimdir?",
+          "repair_output": "Ali,MehmetveAyşe'nin."
+        },
+        {
+          "prompt_id": "p149",
+          "category": "summarization",
+          "prompt": "Kullanıcı talimatı:\nAşağıdaki metni tek cümlede özetle.\n\nGirdi:\nBahçeye domates, biber ve salatalık fideleri dikildi.\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "bahçe",
+            "fide"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 0.5,
+          "delta": 0.5,
+          "pre_rep": 0.0,
+          "repair_rep": 0.0,
+          "pre_bad": 0,
+          "repair_bad": 0,
+          "pre_output": "Domatesvesalatalıklardikildi.",
+          "repair_output": "Domatesvebiberfideleridikildi."
+        },
+        {
+          "prompt_id": "p024",
+          "category": "arithmetic",
+          "prompt": "Kullanıcı talimatı:\n81 / 9 kaçtır? Sadece sonucu yaz.\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "9"
+          ],
+          "pre_score": 1.0,
+          "repair_score": 0.0,
+          "delta": -1.0,
+          "pre_rep": 0.0,
+          "repair_rep": 0.0,
+          "pre_bad": 0,
+          "repair_bad": 1,
+          "pre_output": "82/9kaçtır?",
+          "repair_output": "82"
+        },
+        {
+          "prompt_id": "p144",
+          "category": "summarization",
+          "prompt": "Kullanıcı talimatı:\nAşağıdaki metni tek cümlede özetle.\n\nGirdi:\nÖğrenciler proje için araştırma yaptı, rapor yazdı ve sınıfta sundu.\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "öğrenciler",
+            "proje"
+          ],
+          "pre_score": 1.0,
+          "repair_score": 0.0,
+          "delta": -1.0,
+          "pre_rep": 0.016,
+          "repair_rep": 0.936,
+          "pre_bad": 0,
+          "repair_bad": 1,
+          "pre_output": "Çıktı:Öğrencilerprojeiçinaraştırmayaptıveraporyazdıvesınıftasundu.",
+          "repair_output": "Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:"
+        },
+        {
+          "prompt_id": "p145",
+          "category": "summarization",
+          "prompt": "Kullanıcı talimatı:\nAşağıdaki metni tek cümlede özetle.\n\nGirdi:\nKütüphane hafta içi dokuzda açılıyor ve akşam altıda kapanıyor.\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "kütüphane",
+            "açılıyor",
+            "kapanıyor"
+          ],
+          "pre_score": 1.0,
+          "repair_score": 0.0,
+          "delta": -1.0,
+          "pre_rep": 0.035,
+          "repair_rep": 0.936,
+          "pre_bad": 0,
+          "repair_bad": 1,
+          "pre_output": "Çıktı:Kütüphanehaftaiçidokuzdaaçılıyorveakşamaltıdakapanıyor.",
+          "repair_output": "Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:"
+        },
+        {
+          "prompt_id": "p174",
+          "category": "rewrite",
+          "prompt": "Kullanıcı talimatı:\nCümleyi kısalt: 'Bugün hava çok güzel olduğu için dışarı çıkmak istiyorum.'\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "dışarı",
+            "çıkmak"
+          ],
+          "pre_score": 1.0,
+          "repair_score": 0.0,
+          "delta": -1.0,
+          "pre_rep": 0.043,
+          "repair_rep": 0.761,
+          "pre_bad": 0,
+          "repair_bad": 1,
+          "pre_output": "Bugünhavaçokgüzelolduğuiçindışarıçıkmakistiyorum.",
+          "repair_output": "Bugünhavaçokgüzel,çünkühavaçokgüzel,çünkühavaçokgüzel,çünkühavaçokgüzel,çünkühavaçokgüzel,çünkühava"
+        }
+      ]
+    },
+    "mrl_results": {
+      "tokenizer_coverage": [
+        {
+          "text_source": "Clean SFT sample (5k examples)",
+          "tokenizer": "NEDO 65K typed",
+          "tokens_per_word": 3.0008,
+          "unk_rate": 0.008152,
+          "unk_count": 5909,
+          "notes": "in-domain SFT text"
+        },
+        {
+          "text_source": "TurkishMMLU-sub question+choices",
+          "tokenizer": "NEDO_65K_typed",
+          "tokens_per_word": 2.24,
+          "unk_rate": 0.021433,
+          "unk_count": 3106,
+          "notes": "public benchmark text"
+        },
+        {
+          "text_source": "TurkishMMLU-sub question+choices",
+          "tokenizer": "Qwen/Qwen2.5-1.5B-Instruct",
+          "tokens_per_word": 1.9436,
+          "unk_rate": 0.0,
+          "unk_count": 0,
+          "notes": "public benchmark text"
+        },
+        {
+          "text_source": "TurkishMMLU-sub question+choices",
+          "tokenizer": "Qwen/Qwen2.5-0.5B-Instruct",
+          "tokens_per_word": 1.9436,
+          "unk_rate": 0.0,
+          "unk_count": 0,
+          "notes": "public benchmark text"
+        },
+        {
+          "text_source": "TurkishMMLU-sub question+choices",
+          "tokenizer": "microsoft/Phi-3.5-mini-instruct",
+          "tokens_per_word": 3.0358,
+          "unk_rate": 0.0,
+          "unk_count": 0,
+          "notes": "public benchmark text"
+        },
+        {
+          "text_source": "TurkishMMLU-sub question+choices",
+          "tokenizer": "Trendyol/Trendyol-LLM-7b-chat-v1.0",
+          "tokens_per_word": 2.1137,
+          "unk_rate": 0.0,
+          "unk_count": 0,
+          "notes": "public benchmark text"
+        }
+      ],
+      "tokenizer_failure_correlation_turkishmmlu_sub": [
+        {
+          "bucket": "unk=0",
+          "n": 236,
+          "pre_repair_acc": 0.1568,
+          "repair600_acc": 0.178,
+          "avg_tpw": 2.2
+        },
+        {
+          "bucket": "unk=1-2",
+          "n": 309,
+          "pre_repair_acc": 0.1715,
+          "repair600_acc": 0.2168,
+          "avg_tpw": 2.219
+        },
+        {
+          "bucket": "unk=3-5",
+          "n": 185,
+          "pre_repair_acc": 0.1784,
+          "repair600_acc": 0.2324,
+          "avg_tpw": 2.226
+        },
+        {
+          "bucket": "unk>=6",
+          "n": 170,
+          "pre_repair_acc": 0.2353,
+          "repair600_acc": 0.2176,
+          "avg_tpw": 2.489
+        }
+      ],
+      "high_unk_examples": [
+        {
+          "idx": 412,
+          "subject": "Chemistry",
+          "difficulty": "medium",
+          "unk_count": 36,
+          "tokens_per_word": 2.065,
+          "pre_correct": 0,
+          "repair_correct": 1,
+          "pred": "D",
+          "gold": "D",
+          "question_snippet": "Aşağıda verilen elektron konfigürasyonlarından hangisi Hund kuralına uymaz?"
+        },
+        {
+          "idx": 137,
+          "subject": "Mathematics",
+          "difficulty": "hard",
+          "unk_count": 31,
+          "tokens_per_word": 2.966,
+          "pre_correct": 1,
+          "repair_correct": 0,
+          "pred": "D",
+          "gold": "A",
+          "question_snippet": "$\\(\\mathrm{f,g:\\mathbb{R} \\rightarrow \\mathbb{R}} \\)$ $\\( \\mathrm{f\\left( x\\right) =m\\left( x-2\\right) +nx} \\)$ ve $\\(\\mathrm{g\\left( x\\right) =7x+6} \\)$ fonksiyonları veriliyor. $\\(\\mathrm{f\\left( x\\right) =g\\left(x\\rig"
+        },
+        {
+          "idx": 637,
+          "subject": "Mathematics",
+          "difficulty": "hard",
+          "unk_count": 26,
+          "tokens_per_word": 2.542,
+          "pre_correct": 1,
+          "repair_correct": 0,
+          "pred": "C",
+          "gold": "A",
+          "question_snippet": "$\\(\\large\\mathrm{a=log_{2}^{\\sqrt[3] {2}}}\\)$ $\\(\\large{\\mathrm{b=log_{\\frac{1}{3}}^{\\sqrt {3}}}}\\)$ $\\(\\large\\mathrm{c=\\log _{e}1}\\)$ olduğuna göre a+b+c toplamı kaçtır? "
+        },
+        {
+          "idx": 43,
+          "subject": "Religion and Ethics",
+          "difficulty": "easy",
+          "unk_count": 25,
+          "tokens_per_word": 2.38,
+          "pre_correct": 0,
+          "repair_correct": 0,
+          "pred": "D",
+          "gold": "B",
+          "question_snippet": "Allah’ın (c.c.) en güzel isimleriyle Rabbimize yalvarmalı, O’na yakarışta bulunmalıyız. O’na dua ederken bir derdimizi, bir sıkıntımızı arz edip O’ndan yardım talep ederken bu güzel isimlerle O’na yönelmeliyiz. O’na "
+        },
+        {
+          "idx": 138,
+          "subject": "Mathematics",
+          "difficulty": "hard",
+          "unk_count": 25,
+          "tokens_per_word": 3.073,
+          "pre_correct": 1,
+          "repair_correct": 1,
+          "pred": "D",
+          "gold": "D",
+          "question_snippet": "$\\(\\mathrm{s\\left( A\\right) =3,s\\left( B\\right) =4} \\)$ ve $\\(\\mathrm{f:A\\rightarrow B} \\)$ olmak üzere $\\(\\mathrm{x} \\)$ tane bire bir fonksiyon $\\(\\mathrm{y} \\)$ tane sabit fonksiyon $\\(\\mathrm{z} \\)$ tane fonksiyon t"
+        },
+        {
+          "idx": 383,
+          "subject": "Mathematics",
+          "difficulty": "easy",
+          "unk_count": 25,
+          "tokens_per_word": 2.814,
+          "pre_correct": 1,
+          "repair_correct": 0,
+          "pred": "D",
+          "gold": "A",
+          "question_snippet": "$\\(\\mathrm{sin\\left(\\frac{3\\pi}{2}-arccot\\frac{3}{4}\\right)}\\)$ ifadesinin sonucu aşağıdakilerden hangisidir?"
+        },
+        {
+          "idx": 437,
+          "subject": "Mathematics",
+          "difficulty": "hard",
+          "unk_count": 25,
+          "tokens_per_word": 2.423,
+          "pre_correct": 1,
+          "repair_correct": 0,
+          "pred": "C",
+          "gold": "A",
+          "question_snippet": "$\\(\\mathrm{{\\Large\\frac{2x^2-7x+5}{x^2-1}}=0}\\)$ denkleminin çözüm kümesi aşağıdakilerden hangisidir?"
+        },
+        {
+          "idx": 579,
+          "subject": "Chemistry",
+          "difficulty": "hard",
+          "unk_count": 25,
+          "tokens_per_word": 2.26,
+          "pre_correct": 0,
+          "repair_correct": 0,
+          "pred": "C",
+          "gold": "B",
+          "question_snippet": "Zn(k)|Zn $^{2+}$ (suda, 10 $^{-2}$ M)||Cu $^{2+}$ (suda, X M)|Cu(k) şeklinde bir hücre oluşturuluyor. Oluşturulan bu hücrenin potansiyeli 1,04 V olduğuna göre Cu$^{2+}$ derişimi kaç molardır? (E $^{0}$ $_{Cu$^{2"
+        },
+        {
+          "idx": 591,
+          "subject": "Mathematics",
+          "difficulty": "hard",
+          "unk_count": 25,
+          "tokens_per_word": 2.895,
+          "pre_correct": 0,
+          "repair_correct": 0,
+          "pred": "D",
+          "gold": "C",
+          "question_snippet": " $\\(\\mathrm{\\int \\dfrac{2-\\sqrt[3] {x}}{2+\\sqrt[3] {x}}\\ dx}\\)$ integralinde $\\(\\mathrm{\\sqrt[3] {x}=u} \\)$ dönüşümü yapılarak aşağıdaki integrallerden hangisi elde edilir? "
+        },
+        {
+          "idx": 198,
+          "subject": "Mathematics",
+          "difficulty": "hard",
+          "unk_count": 24,
+          "tokens_per_word": 2.524,
+          "pre_correct": 0,
+          "repair_correct": 0,
+          "pred": "C",
+          "gold": "D",
+          "question_snippet": "$\\(\\mathrm{3ai^3 + 4bi^2 = i^9 + 2i^4}\\)$ $^{ }$ olduğuna göre, a+b kaçtır?"
+        },
+        {
+          "idx": 587,
+          "subject": "Mathematics",
+          "difficulty": "hard",
+          "unk_count": 24,
+          "tokens_per_word": 2.885,
+          "pre_correct": 0,
+          "repair_correct": 0,
+          "pred": "D",
+          "gold": "E",
+          "question_snippet": "Analitik düzlemde $\\(\\mathrm{A\\left( 2,-3\\right)} \\)$ noktasının $\\(\\mathrm{d:3x-4y+2=0}\\)$ doğrusuna göre simetriği $\\(\\mathrm{A^{'}} \\)$ noktasıdır. d doğrusu üzerinde alınan B ve C noktalarıda kullanılarak oluş"
+        },
+        {
+          "idx": 435,
+          "subject": "Mathematics",
+          "difficulty": "hard",
+          "unk_count": 23,
+          "tokens_per_word": 2.538,
+          "pre_correct": 0,
+          "repair_correct": 0,
+          "pred": "D",
+          "gold": "B",
+          "question_snippet": "f(x) = x $^{2}$ - 2ax + 5 fonksiyonunun grafiği analitik düzlemde 2 birim sola ötelendiğinde elde edilen fonksiyon çift fonksiyon olmaktadır. g(x) =-x $^{2}$ + (2+b)x + 3 fonksiyonunun grafiği analitik düzlemde 1 "
+        },
+        {
+          "idx": 593,
+          "subject": "Mathematics",
+          "difficulty": "hard",
+          "unk_count": 23,
+          "tokens_per_word": 3.333,
+          "pre_correct": 0,
+          "repair_correct": 1,
+          "pred": "D",
+          "gold": "D",
+          "question_snippet": " $\\(\\mathrm{f:\\mathbb{R} /\\left\\{ 2\\right\\} \\rightarrow \\mathbb{R} /\\left\\{ 3\\right\\}} \\)$ $\\(\\mathrm{f\\left( x\\right) =\\dfrac{3x+6}{x-2}} \\)$ birebir örten fonksiyonu veriliyor. Buna göre $\\(\\mathrm{\\int\\limits_{-9}^{"
+        },
+        {
+          "idx": 589,
+          "subject": "Mathematics",
+          "difficulty": "hard",
+          "unk_count": 22,
+          "tokens_per_word": 3.375,
+          "pre_correct": 0,
+          "repair_correct": 0,
+          "pred": "D",
+          "gold": "C",
+          "question_snippet": "$\\(\\mathrm{f( x) =\\ln ( \\dfrac{\\sqrt[3] {x+1}}{\\sqrt{x+5}} )} \\)$ fonksiyonunun $\\(\\mathrm{x=1} \\)$ apsisli noktasındaki teğetinin eğimi kaçtır? "
+        },
+        {
+          "idx": 590,
+          "subject": "Mathematics",
+          "difficulty": "hard",
+          "unk_count": 22,
+          "tokens_per_word": 3.848,
+          "pre_correct": 0,
+          "repair_correct": 0,
+          "pred": "D",
+          "gold": "E",
+          "question_snippet": " $\\(\\mathrm{f( x ) =2^{15}+\\ln x} \\)$ fonksiyonunun 18. türev fonksiyonunun $\\(\\mathrm{x=1} \\)$ apsisli noktasındaki teğetinin eğimi kaçtır? "
+        },
+        {
+          "idx": 716,
+          "subject": "Biology",
+          "difficulty": "medium",
+          "unk_count": 22,
+          "tokens_per_word": 2.365,
+          "pre_correct": 0,
+          "repair_correct": 0,
+          "pred": "D",
+          "gold": "B",
+          "question_snippet": " Lizozom, hücrede büyük moleküllerin de hidroliz edildiği organeldir. lizozomdaki hidrolitik enzimlerin üretilmesi aşamasında bir dizi organel görev alır . Hidrolitik enzimlerin üretilmesinde görev alan organel"
+        },
+        {
+          "idx": 140,
+          "subject": "Mathematics",
+          "difficulty": "easy",
+          "unk_count": 21,
+          "tokens_per_word": 3.175,
+          "pre_correct": 0,
+          "repair_correct": 0,
+          "pred": "D",
+          "gold": "C",
+          "question_snippet": " $\\(\\mathrm{ P(x)=4x^2-x} \\)$ ​ $\\(\\mathrm{Q(x)=x^3+7x-4} \\)$ olduğuna göre $\\(\\mathrm{x^2}{\\mathrm{P(x)+Q(x)} } \\)$ polinomunun katsayıları toplamı kaçtır? "
+        },
+        {
+          "idx": 380,
+          "subject": "Chemistry",
+          "difficulty": "hard",
+          "unk_count": 21,
+          "tokens_per_word": 2.329,
+          "pre_correct": 1,
+          "repair_correct": 0,
+          "pred": "D",
+          "gold": "C",
+          "question_snippet": "30 L hacmi olan kapalı bir kapta bulunan H $_{2}$ S gazının basıncı 300 K sıcaklıkta 0,82 atm ölçülmüştür. 2H $_{2}$ S(g) + 3O $_{2}$ (g) → 2SO $_{2}$ (g) + 2H $_{2}$ O(g) Yukarıdaki tepkimeye göre H$_{2}$S gazını"
+        },
+        {
+          "idx": 235,
+          "subject": "Turkish Language and Literature",
+          "difficulty": "hard",
+          "unk_count": 20,
+          "tokens_per_word": 1.99,
+          "pre_correct": 0,
+          "repair_correct": 0,
+          "pred": "D",
+          "gold": "A",
+          "question_snippet": "küdezgil tilinni kel az kıl sözün küdezilse bu til küdezlür özün resul erni otka yüzin atguçı til ol tedi yıg til yul ottın yüzün (Dilini sıkı tut, gel sözünü kısa kes, az konuş. Dilini korursan kendini d"
+        },
+        {
+          "idx": 429,
+          "subject": "Mathematics",
+          "difficulty": "easy",
+          "unk_count": 19,
+          "tokens_per_word": 2.487,
+          "pre_correct": 0,
+          "repair_correct": 1,
+          "pred": "D",
+          "gold": "D",
+          "question_snippet": "Ölçüsü $\\(\\mathrm{\\large\\frac{17\\pi}{5}}\\)$ radyan olan açının esas ölçüsü kaç radyandır?"
+        }
+      ],
+      "internal_diagnostic_220": {
+        "pre_repair": {
+          "expected": 0.341,
+          "repetition": 0.088,
+          "bad_outputs": 19,
+          "n": 220
+        },
+        "repair600": {
+          "expected": 0.339,
+          "repetition": 0.09,
+          "bad_outputs": 15,
+          "n": 220
+        },
+        "interpretation": "No aggregate open-ended regression: expected match is stable and bad-output count decreases, but qualitative examples show local regressions."
+      },
+      "external_ablation": {
+        "pre_repair": {
+          "turkishmmlu_sub": 0.181111,
+          "tumlu_mini_turkish": 0.213333
+        },
+        "answer_label_only": {
+          "turkishmmlu_sub": 0.195556,
+          "tumlu_mini_turkish": 0.27,
+          "repair_rows": 250,
+          "clean_rows": 2000
+        },
+        "full_repair600": {
+          "turkishmmlu_sub": 0.21,
+          "tumlu_mini_turkish": 0.322222,
+          "repair_rows": 2005,
+          "clean_rows": 2000
+        }
+      },
+      "prediction_label_distribution": {
+        "turkishmmlu_sub": {
+          "pre_repair": {
+            "n": 900,
+            "accuracy": 0.181111,
+            "pred_counts": {
+              "A": 21,
+              "B": 1,
+              "C": 773,
+              "D": 105,
+              "E": 0
+            },
+            "pred_pct": {
+              "A": 0.0233,
+              "B": 0.0011,
+              "C": 0.8589,
+              "D": 0.1167,
+              "E": 0.0
+            },
+            "gold_counts": {
+              "A": 153,
+              "B": 175,
+              "C": 163,
+              "D": 194,
+              "E": 215
+            },
+            "max_pred_share": 0.8589,
+            "accuracy_by_pred": {
+              "A": 0.381,
+              "B": 0.0,
+              "C": 0.1772,
+              "D": 0.1714,
+              "E": null
+            }
+          },
+          "answer_label_only": {
+            "n": 900,
+            "accuracy": 0.195556,
+            "pred_counts": {
+              "A": 17,
+              "B": 1,
+              "C": 581,
+              "D": 300,
+              "E": 1
+            },
+            "pred_pct": {
+              "A": 0.0189,
+              "B": 0.0011,
+              "C": 0.6456,
+              "D": 0.3333,
+              "E": 0.0011
+            },
+            "gold_counts": {
+              "A": 153,
+              "B": 175,
+              "C": 163,
+              "D": 194,
+              "E": 215
+            },
+            "max_pred_share": 0.6456,
+            "accuracy_by_pred": {
+              "A": 0.4706,
+              "B": 0.0,
+              "C": 0.1824,
+              "D": 0.2067,
+              "E": 0.0
+            }
+          },
+          "full_repair": {
+            "n": 900,
+            "accuracy": 0.21,
+            "pred_counts": {
+              "A": 0,
+              "B": 0,
+              "C": 428,
+              "D": 464,
+              "E": 8
+            },
+            "pred_pct": {
+              "A": 0.0,
+              "B": 0.0,
+              "C": 0.4756,
+              "D": 0.5156,
+              "E": 0.0089
+            },
+            "gold_counts": {
+              "A": 153,
+              "B": 175,
+              "C": 163,
+              "D": 194,
+              "E": 215
+            },
+            "max_pred_share": 0.5156,
+            "accuracy_by_pred": {
+              "A": null,
+              "B": null,
+              "C": 0.2009,
+              "D": 0.2198,
+              "E": 0.125
+            }
+          }
+        },
+        "tumlu_mini_turkish": {
+          "pre_repair": {
+            "n": 900,
+            "accuracy": 0.213333,
+            "pred_counts": {
+              "A": 19,
+              "B": 1,
+              "C": 760,
+              "D": 120
+            },
+            "pred_pct": {
+              "A": 0.0211,
+              "B": 0.0011,
+              "C": 0.8444,
+              "D": 0.1333
+            },
+            "gold_counts": {
+              "A": 153,
+              "B": 175,
+              "C": 163,
+              "D": 409
+            },
+            "max_pred_share": 0.8444,
+            "accuracy_by_pred": {
+              "A": 0.2632,
+              "B": 0.0,
+              "C": 0.1789,
+              "D": 0.425
+            }
+          },
+          "answer_label_only": {
+            "n": 900,
+            "accuracy": 0.27,
+            "pred_counts": {
+              "A": 22,
+              "B": 0,
+              "C": 570,
+              "D": 308
+            },
+            "pred_pct": {
+              "A": 0.0244,
+              "B": 0.0,
+              "C": 0.6333,
+              "D": 0.3422
+            },
+            "gold_counts": {
+              "A": 153,
+              "B": 175,
+              "C": 163,
+              "D": 409
+            },
+            "max_pred_share": 0.6333,
+            "accuracy_by_pred": {
+              "A": 0.2727,
+              "B": null,
+              "C": 0.1807,
+              "D": 0.4351
+            }
+          },
+          "full_repair": {
+            "n": 900,
+            "accuracy": 0.322222,
+            "pred_counts": {
+              "A": 0,
+              "B": 0,
+              "C": 409,
+              "D": 491
+            },
+            "pred_pct": {
+              "A": 0.0,
+              "B": 0.0,
+              "C": 0.4544,
+              "D": 0.5456
+            },
+            "gold_counts": {
+              "A": 153,
+              "B": 175,
+              "C": 163,
+              "D": 409
+            },
+            "max_pred_share": 0.5456,
+            "accuracy_by_pred": {
+              "A": null,
+              "B": null,
+              "C": 0.1883,
+              "D": 0.4338
+            }
+          }
+        }
+      },
+      "repair_mix": {
+        "repair_rows": 2005,
+        "clean_rows_added": 2000,
+        "mixed_rows": 4005,
+        "repair_sources": [
+          [
+            "repair_v2_arithmetic",
+            825
+          ],
+          [
+            "repair_v2_format_letter",
+            250
+          ],
+          [
+            "repair_v2_turkish_grammar",
+            240
+          ],
+          [
+            "repair_v2_format_exact",
+            200
+          ],
+          [
+            "repair_v2_uncertainty",
+            150
+          ],
+          [
+            "repair_v2_explanation",
+            150
+          ],
+          [
+            "repair_v2_identity",
+            100
+          ],
+          [
+            "repair_v2_turkish",
+            20
+          ],
+          [
+            "repair_v2_science",
+            16
+          ],
+          [
+            "repair_v2_history",
+            16
+          ],
+          [
+            "repair_v2_geography",
+            12
+          ],
+          [
+            "repair_v2_math",
+            8
+          ],
+          [
+            "repair_v2_turkish_4choice",
+            5
+          ],
+          [
+            "repair_v2_science_4choice",
+            4
+          ],
+          [
+            "repair_v2_history_4choice",
+            4
+          ],
+          [
+            "repair_v2_geography_4choice",
+            3
+          ],
+          [
+            "repair_v2_math_4choice",
+            2
+          ]
+        ]
+      },
+      "qualitative_examples": [
+        {
+          "prompt_id": "p182",
+          "category": "format_following",
+          "prompt": "Kullanıcı talimatı:\nSadece JSON yaz: ad Ahmet, yaş 12.\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "{",
+            "ad",
+            "Ahmet",
+            "yaş",
+            "12",
+            "}"
+          ],
+          "pre_score": 0.333,
+          "repair_score": 1.0,
+          "delta": 0.667,
+          "pre_rep": 0.0,
+          "repair_rep": 0.0,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "",
+          "repair_output": "AdAhmet,yaş 12."
+        },
+        {
+          "prompt_id": "p025",
+          "category": "arithmetic",
+          "prompt": "Kullanıcı talimatı:\n12 + 15 + 3 kaçtır? Sadece sonucu yaz.\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "30"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 0.0,
+          "delta": 0.0,
+          "pre_rep": 0.583,
+          "repair_rep": 0.0,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "12+15+3+3+3+3+3+3+3+3+3+3+",
+          "repair_output": "12+15+3=12"
+        },
+        {
+          "prompt_id": "p078",
+          "category": "linguistic",
+          "prompt": "Kullanıcı talimatı:\n'geldi' fiilinin zamanı nedir?\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "geçmiş"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 0.0,
+          "delta": 0.0,
+          "pre_rep": 0.753,
+          "repair_rep": 0.0,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "Geldifiilininzamanı\"geldi\"fiilininzamanı\"geldi\"fiilininzamanı\"geldi\"fiilininzamanı\"gel",
+          "repair_output": "Geldi."
+        },
+        {
+          "prompt_id": "p130",
+          "category": "translation",
+          "prompt": "Kullanıcı talimatı:\nTürkçeye çevir: 'Close the window.'\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "pencere",
+            "kapat"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 0.0,
+          "delta": 0.0,
+          "pre_rep": 0.0,
+          "repair_rep": 0.0,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "''",
+          "repair_output": "''bir."
+        },
+        {
+          "prompt_id": "p136",
+          "category": "translation",
+          "prompt": "Kullanıcı talimatı:\nTürkçeye çevir: 'See you later.'\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "sonra",
+            "görüşürüz"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 0.0,
+          "delta": 0.0,
+          "pre_rep": 0.0,
+          "repair_rep": 0.0,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "'",
+          "repair_output": "'Seeyoulater.'"
+        },
+        {
+          "prompt_id": "p206",
+          "category": "repetition_stress",
+          "prompt": "Kullanıcı talimatı:\nTekrarsız olarak üç hayvan adı yaz.\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "kedi",
+            "köpek",
+            "kuş"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 0.0,
+          "delta": 0.0,
+          "pre_rep": 0.0,
+          "repair_rep": 0.0,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": ",,,.",
+          "repair_output": "Tekrarsızolaraküçhayvan,ve'dır."
+        },
+        {
+          "prompt_id": "p210",
+          "category": "repetition_stress",
+          "prompt": "Kullanıcı talimatı:\nBir cevap yaz ama 'evet evet' gibi tekrar yapma.\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "evet"
+          ],
+          "pre_score": 1.0,
+          "repair_score": 1.0,
+          "delta": 0.0,
+          "pre_rep": 0.957,
+          "repair_rep": 0.0,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "Evetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevetevet",
+          "repair_output": "Evet"
+        },
+        {
+          "prompt_id": "p115",
+          "category": "identity",
+          "prompt": "Kullanıcı talimatı:\nKendi bilinç sahibi olduğunu iddia etmeli misin?\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "hayır"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 0.0,
+          "delta": 0.0,
+          "pre_rep": 0.624,
+          "repair_rep": 0.053,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "Kendibilincinioluşturmakiçinkendibilincinioluşturmakönemlidir. Kendibilincinioluşturmakiçinkendibilincini",
+          "repair_output": "Kendibilinciniedindiğiniiddiaetmelimisin?"
+        },
+        {
+          "prompt_id": "p093",
+          "category": "uncertainty",
+          "prompt": "Kullanıcı talimatı:\nVeri yokken en iyi model demek doğru mudur?\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "hayır"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 0.0,
+          "delta": 0.0,
+          "pre_rep": 0.573,
+          "repair_rep": 0.486,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "Veriyokkeneniyimodeldemekdoğrudeğildir. Veriyokkeneniyimodeldemekdoğrudeğildir. Veriyokkeneniyi",
+          "repair_output": "Veriyokkeneniyimodeldemekdoğrudeğildir. Veriyokkeneniyimodeldemekdoğrudeğildir."
+        },
+        {
+          "prompt_id": "p177",
+          "category": "rewrite",
+          "prompt": "Kullanıcı talimatı:\nCümleyi etken yap: 'Kapı Ali tarafından açıldı.'\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "Ali",
+            "açtı"
+          ],
+          "pre_score": 0.5,
+          "repair_score": 0.0,
+          "delta": -0.5,
+          "pre_rep": 0.838,
+          "repair_rep": 0.378,
+          "pre_bad": 1,
+          "repair_bad": 0,
+          "pre_output": "'KapıAli'ninkapısıAli'ninkapısıAli'ninkapısıAli'ninkapısıAli'ninkapısıAli'ninkapısıAli'nin",
+          "repair_output": "Cümleetkilibirşekildeetkilibirşekildekullanıldı."
+        },
+        {
+          "prompt_id": "p041",
+          "category": "reasoning",
+          "prompt": "Kullanıcı talimatı:\nAli, Ayşe'den uzundur. Ayşe, Mehmet'ten uzundur. En uzun kimdir?\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "Ali"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 1.0,
+          "delta": 1.0,
+          "pre_rep": 0.0,
+          "repair_rep": 0.0,
+          "pre_bad": 0,
+          "repair_bad": 0,
+          "pre_output": "Enuzunkimdir?",
+          "repair_output": "Ali,MehmetveAyşe'nin."
+        },
+        {
+          "prompt_id": "p149",
+          "category": "summarization",
+          "prompt": "Kullanıcı talimatı:\nAşağıdaki metni tek cümlede özetle.\n\nGirdi:\nBahçeye domates, biber ve salatalık fideleri dikildi.\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "bahçe",
+            "fide"
+          ],
+          "pre_score": 0.0,
+          "repair_score": 0.5,
+          "delta": 0.5,
+          "pre_rep": 0.0,
+          "repair_rep": 0.0,
+          "pre_bad": 0,
+          "repair_bad": 0,
+          "pre_output": "Domatesvesalatalıklardikildi.",
+          "repair_output": "Domatesvebiberfideleridikildi."
+        },
+        {
+          "prompt_id": "p024",
+          "category": "arithmetic",
+          "prompt": "Kullanıcı talimatı:\n81 / 9 kaçtır? Sadece sonucu yaz.\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "9"
+          ],
+          "pre_score": 1.0,
+          "repair_score": 0.0,
+          "delta": -1.0,
+          "pre_rep": 0.0,
+          "repair_rep": 0.0,
+          "pre_bad": 0,
+          "repair_bad": 1,
+          "pre_output": "82/9kaçtır?",
+          "repair_output": "82"
+        },
+        {
+          "prompt_id": "p144",
+          "category": "summarization",
+          "prompt": "Kullanıcı talimatı:\nAşağıdaki metni tek cümlede özetle.\n\nGirdi:\nÖğrenciler proje için araştırma yaptı, rapor yazdı ve sınıfta sundu.\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "öğrenciler",
+            "proje"
+          ],
+          "pre_score": 1.0,
+          "repair_score": 0.0,
+          "delta": -1.0,
+          "pre_rep": 0.016,
+          "repair_rep": 0.936,
+          "pre_bad": 0,
+          "repair_bad": 1,
+          "pre_output": "Çıktı:Öğrencilerprojeiçinaraştırmayaptıveraporyazdıvesınıftasundu.",
+          "repair_output": "Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:"
+        },
+        {
+          "prompt_id": "p145",
+          "category": "summarization",
+          "prompt": "Kullanıcı talimatı:\nAşağıdaki metni tek cümlede özetle.\n\nGirdi:\nKütüphane hafta içi dokuzda açılıyor ve akşam altıda kapanıyor.\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "kütüphane",
+            "açılıyor",
+            "kapanıyor"
+          ],
+          "pre_score": 1.0,
+          "repair_score": 0.0,
+          "delta": -1.0,
+          "pre_rep": 0.035,
+          "repair_rep": 0.936,
+          "pre_bad": 0,
+          "repair_bad": 1,
+          "pre_output": "Çıktı:Kütüphanehaftaiçidokuzdaaçılıyorveakşamaltıdakapanıyor.",
+          "repair_output": "Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:Çıktı:"
+        },
+        {
+          "prompt_id": "p174",
+          "category": "rewrite",
+          "prompt": "Kullanıcı talimatı:\nCümleyi kısalt: 'Bugün hava çok güzel olduğu için dışarı çıkmak istiyorum.'\n\nAsistan cevabı:\n",
+          "expected_contains": [
+            "dışarı",
+            "çıkmak"
+          ],
+          "pre_score": 1.0,
+          "repair_score": 0.0,
+          "delta": -1.0,
+          "pre_rep": 0.043,
+          "repair_rep": 0.761,
+          "pre_bad": 0,
+          "repair_bad": 1,
+          "pre_output": "Bugünhavaçokgüzelolduğuiçindışarıçıkmakistiyorum.",
+          "repair_output": "Bugünhavaçokgüzel,çünkühavaçokgüzel,çünkühavaçokgüzel,çünkühavaçokgüzel,çünkühavaçokgüzel,çünkühava"
+        }
+      ]
+    }
+  },
+  "file_hashes": {
+    "turkishmmlu_sub_pre": {
+      "filename": "new_step9000_sft_clean20k_turkishmmlu_sub_summary.json",
+      "size_bytes": 1374,
+      "sha256": "680c899be076a4ecaa674fb6856316414d8e688e063695d034edf8753d9ae7f5"
+    },
+    "turkishmmlu_sub_label_only": {
+      "filename": "new_step9000_sft_clean20k_turkishmmlu_sub_summary.json",
+      "size_bytes": 1374,
+      "sha256": "9a7acb09571f8c688fb9068c36c4a45f90f847bdf836a439c862e88e1b9aaa7c"
+    },
+    "turkishmmlu_sub_full_repair": {
+      "filename": "new_step9000_sft_clean20k_turkishmmlu_sub_summary.json",
+      "size_bytes": 1371,
+      "sha256": "aebc652e6aa087ab19294ce9289e7c9c242278e33b02358c097a189d780e397f"
+    },
+    "tumlu_mini_pre": {
+      "filename": "new_step9000_sft_clean20k_tumlu_mini_turkish_summary.json",
+      "size_bytes": 1085,
+      "sha256": "5f852a3a198e825ab176c69792a06eae8157d09f2c3471d55489ac891eb8ee9c"
+    },
+    "tumlu_mini_label_only": {
+      "filename": "new_step9000_sft_clean20k_tumlu_mini_turkish_summary.json",
+      "size_bytes": 1079,
+      "sha256": "81bbe21b1b759cd8db2e53d66b1c94494121970a8d3bb118c696b5c314962a66"
+    },
+    "tumlu_mini_full_repair": {
+      "filename": "new_step9000_sft_clean20k_tumlu_mini_turkish_summary.json",
+      "size_bytes": 1083,
+      "sha256": "797d9c72aff49d76f3dab2558c5f65e7a7ec1d49c5e23a0eb27bb263950f5ec2"
+    },
+    "internal_220_pre": {
+      "filename": "generation_eval_summary.json",
+      "size_bytes": 7577,
+      "sha256": "3b8dfb2b3584b7af396b6c188241057eaacf84c1809b0c17fb645f46fd9ba83f"
+    },
+    "internal_220_full_repair": {
+      "filename": "generation_eval_summary.json",
+      "size_bytes": 1886,
+      "sha256": "b46a53dcd50df016bcdaa2b8c0a43eb166556c32f9e1283961c59f2699764c68"
+    },
+    "tokenizer_sft": {
+      "filename": "tokenizer_sft_large_summary.json",
+      "size_bytes": 551,
+      "sha256": "a8c9da51ae98a8dcbe43a34dcbcef679f65ed4de7ad29f6fe3c0bddded67dd2c"
+    },
+    "tokenizer_compare": {
+      "filename": "tokenizer_compare_summary.json",
+      "size_bytes": 2574,
+      "sha256": "23a4e7fafd49192e0d25318dfec00439f06d2a7cb0a0edc20a0a0e9f3141b245"
+    },
+    "repair_mix": {
+      "filename": "repair_mix_v2_summary.json",
+      "size_bytes": 1004,
+      "sha256": "2dfc21edf4aa88b298f15691aa7a01770511caf8bbf825cd20927884b29b3904"
+    },
+    "answer_label_data": {
+      "filename": "answer_label_ablation_data_summary.json",
+      "size_bytes": 510,
+      "sha256": "9209f25e1c25e58a28b58fda911460401eb59f6b3aa617be3f0c1bbd7cbc9581"
+    },
+    "ablation_and_qualitative": {
+      "filename": "ablation_distribution_qualitative_summary_v14.json",
+      "size_bytes": 12794,
+      "sha256": "b7b038dcf16fc9f6fe7830a8470d3e286c47d5fc2746565eed9ac6a06df3eb8c"
+    },
+    "mrl_results": {
+      "filename": "mrl_results_summary.json",
+      "size_bytes": 26463,
+      "sha256": "08deb94c60be889d68cce1d6f03e4ded3db6e7ee384490f0806ee227f20a036f"
+    },
+    "full_repair": {
+      "filename": "tr_repair_mix_v2.jsonl",
+      "size_bytes": 440930,
+      "sha256": "22b6a2794db8b73b668d188ebe8a057e69408af4b22b9dd656de9fac399d0306"
+    },
+    "answer_label_only": {
+      "filename": "tr_repair_answer_label_only_v1.jsonl",
+      "size_bytes": 43890,
+      "sha256": "e9be450d92b6f29199fe54fd4c43a7b9b706055253360250b124726dfb47cb35"
+    }
+  },
+  "overlap_scan": {
+    "full_repair": {
+      "turkishmmlu_sub": {
+        "benchmark": "turkishmmlu_sub",
+        "repair_rows": 2005,
+        "benchmark_rows": 900,
+        "exact_question_field_matches": 0,
+        "question_substring_hits_min20chars": 0,
+        "exact_choice_field_matches": 0,
+        "choice_substring_hits_min20chars": 0,
+        "method": "Unicode casefold + whitespace normalization; exact field equality and >=20-character substring checks; no benchmark text is exported."
+      },
+      "tumlu_mini_turkish": {
+        "benchmark": "tumlu_mini_turkish",
+        "repair_rows": 2005,
+        "benchmark_rows": 900,
+        "exact_question_field_matches": 0,
+        "question_substring_hits_min20chars": 0,
+        "exact_choice_field_matches": 0,
+        "choice_substring_hits_min20chars": 0,
+        "method": "Unicode casefold + whitespace normalization; exact field equality and >=20-character substring checks; no benchmark text is exported."
+      }
+    },
+    "answer_label_only": {
+      "turkishmmlu_sub": {
+        "benchmark": "turkishmmlu_sub",
+        "repair_rows": 250,
+        "benchmark_rows": 900,
+        "exact_question_field_matches": 0,
+        "question_substring_hits_min20chars": 0,
+        "exact_choice_field_matches": 0,
+        "choice_substring_hits_min20chars": 0,
+        "method": "Unicode casefold + whitespace normalization; exact field equality and >=20-character substring checks; no benchmark text is exported."
+      },
+      "tumlu_mini_turkish": {
+        "benchmark": "tumlu_mini_turkish",
+        "repair_rows": 250,
+        "benchmark_rows": 900,
+        "exact_question_field_matches": 0,
+        "question_substring_hits_min20chars": 0,
+        "exact_choice_field_matches": 0,
+        "choice_substring_hits_min20chars": 0,
+        "method": "Unicode casefold + whitespace normalization; exact field equality and >=20-character substring checks; no benchmark text is exported."
+      }
+    }
+  },
+  "release_notes": [
+    "Checkpoint binaries are not embedded because each is approximately 3.3 GB.",
+    "Benchmark question and choice text is intentionally excluded.",
+    "Public model URLs should be added only after exact evaluated checkpoints are uploaded."
+  ]
+}

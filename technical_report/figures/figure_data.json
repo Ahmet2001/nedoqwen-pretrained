@@ -1,0 +1,39 @@
+{
+  "source": "../../reports/CONSOLIDATED_EXPERIMENT_REGISTRY.md and ../../reports/NEDOQWEN_CROSS_PAPER_AUDIT.md",
+  "benchmarks": {
+    "TurkishMMLU-sub": {
+      "chance": 20.0,
+      "Qwen2.5-0.5B": 19.33,
+      "NEDO pre-repair": 18.11,
+      "NEDO label-only": 19.56,
+      "NEDO full repair": 21.0,
+      "Qwen2.5-1.5B": 28.67
+    },
+    "TUMLU-mini Turkish": {
+      "chance": 25.0,
+      "Qwen2.5-0.5B": 19.89,
+      "NEDO pre-repair": 21.33,
+      "NEDO label-only": 27.0,
+      "NEDO full repair": 32.22,
+      "Qwen2.5-1.5B": 42.0
+    }
+  },
+  "label_distributions": {
+    "TurkishMMLU-sub": {
+      "NEDO pre-repair": {"A": 2.3, "B": 0.1, "C": 85.9, "D": 11.7, "E": 0.0},
+      "NEDO label-only": {"A": 1.9, "B": 0.1, "C": 64.6, "D": 33.3, "E": 0.1},
+      "NEDO full repair": {"A": 0.0, "B": 0.0, "C": 47.6, "D": 51.6, "E": 0.9}
+    },
+    "TUMLU-mini Turkish": {
+      "NEDO pre-repair": {"A": 2.1, "B": 0.1, "C": 84.4, "D": 13.3},
+      "NEDO label-only": {"A": 2.4, "B": 0.0, "C": 63.3, "D": 34.2},
+      "NEDO full repair": {"A": 0.0, "B": 0.0, "C": 45.4, "D": 54.6}
+    }
+  },
+  "tokenizers_on_turkishmmlu_sub": {
+    "NEDO 65K": {"tokens_per_word": 2.24, "unk_percent": 2.1433},
+    "Qwen2.5": {"tokens_per_word": 1.9436, "unk_percent": 0.0},
+    "Trendyol-LLM": {"tokens_per_word": 2.1137, "unk_percent": 0.0},
+    "Phi-3.5": {"tokens_per_word": 3.0358, "unk_percent": 0.0}
+  }
+}

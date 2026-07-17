@@ -1,0 +1,107 @@
+{
+  "method": {
+    "bootstrap": "paired percentile bootstrap over row-level correctness differences",
+    "bootstrap_samples": 100000,
+    "seed": 42,
+    "p_value": "exact two-sided sign test over discordant pairs"
+  },
+  "comparisons": {
+    "turkishmmlu_full_minus_pre": {
+      "n": 900,
+      "delta_percentage_points": 2.889,
+      "positive_discordant_rows": 88,
+      "negative_discordant_rows": 62,
+      "ties": 750,
+      "fixed_seed_bootstrap_95_ci_pp": [
+        0.222,
+        5.556
+      ],
+      "historical_reported_95_ci_pp": [
+        0.222,
+        5.556
+      ],
+      "exact_two_sided_sign_p": 0.04086849386649393
+    },
+    "tumlu_full_minus_pre": {
+      "n": 900,
+      "delta_percentage_points": 10.889,
+      "positive_discordant_rows": 163,
+      "negative_discordant_rows": 65,
+      "ties": 672,
+      "fixed_seed_bootstrap_95_ci_pp": [
+        7.667,
+        14.111
+      ],
+      "historical_reported_95_ci_pp": [
+        7.778,
+        14.0
+      ],
+      "exact_two_sided_sign_p": 6.784530693210539e-11
+    },
+    "turkishmmlu_label_only_minus_pre": {
+      "n": 900,
+      "delta_percentage_points": 1.444,
+      "positive_discordant_rows": 45,
+      "negative_discordant_rows": 32,
+      "ties": 823,
+      "fixed_seed_bootstrap_95_ci_pp": [
+        -0.444,
+        3.333
+      ],
+      "historical_reported_95_ci_pp": [
+        -0.333,
+        3.333
+      ],
+      "exact_two_sided_sign_p": 0.17106097355391156
+    },
+    "tumlu_label_only_minus_pre": {
+      "n": 900,
+      "delta_percentage_points": 5.667,
+      "positive_discordant_rows": 84,
+      "negative_discordant_rows": 33,
+      "ties": 783,
+      "fixed_seed_bootstrap_95_ci_pp": [
+        3.333,
+        8.0
+      ],
+      "historical_reported_95_ci_pp": [
+        3.444,
+        8.111
+      ],
+      "exact_two_sided_sign_p": 2.673285486288063e-06
+    },
+    "turkishmmlu_full_minus_label_only": {
+      "n": 900,
+      "delta_percentage_points": 1.444,
+      "positive_discordant_rows": 45,
+      "negative_discordant_rows": 32,
+      "ties": 823,
+      "fixed_seed_bootstrap_95_ci_pp": [
+        -0.444,
+        3.333
+      ],
+      "historical_reported_95_ci_pp": [
+        -0.444,
+        3.333
+      ],
+      "exact_two_sided_sign_p": 0.17106097355391156
+    },
+    "tumlu_full_minus_label_only": {
+      "n": 900,
+      "delta_percentage_points": 5.222,
+      "positive_discordant_rows": 82,
+      "negative_discordant_rows": 35,
+      "ties": 783,
+      "fixed_seed_bootstrap_95_ci_pp": [
+        2.889,
+        7.556
+      ],
+      "historical_reported_95_ci_pp": [
+        2.889,
+        7.556
+      ],
+      "exact_two_sided_sign_p": 1.6504133479434384e-05
+    }
+  },
+  "note": "The historical report used an earlier approximate resampling run. Small one-grid-step CI differences are expected; the fixed-seed rerun is included for deterministic reproduction."
+}

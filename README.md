@@ -9,7 +9,25 @@ The large datasets and model checkpoints are released on Hugging Face. This GitH
 - `scripts/`: training, encoding, SFT, sampling, inspection, and upload scripts
 - `nedo_turkish_tokenizer/`: tokenizer Python package used by the sampling scripts
 - `docs/`: usage and artifact documentation
+- `technical_report/`: canonical report, reproducible figures, sanitized
+  predictions, evaluation scripts, checkpoint hashes, and validation tools
 - `requirements.txt`: minimal Python dependencies
+
+## Technical report and reproducibility package
+
+The canonical report is available as
+[`technical_report/NEDOQwen_Technical_Report.pdf`](technical_report/NEDOQwen_Technical_Report.pdf).
+Its supplementary package deliberately excludes benchmark question/choice text
+and model binaries. Exact experimental checkpoints and the tokenizer vocabulary
+are identified by SHA-256 in
+[`technical_report/SURVIVAL_MANIFEST.md`](technical_report/SURVIVAL_MANIFEST.md)
+and [`technical_report/supplementary/manifest.json`](technical_report/supplementary/manifest.json).
+
+To validate the supplementary package locally:
+
+```bash
+python3 technical_report/supplementary/validate_supplementary.py
+```
 
 ## Released artifacts
 
@@ -33,6 +51,11 @@ Excluded files include:
 - container images
 
 Use the Hugging Face repositories above for released datasets and model checkpoints.
+
+The headline diagnosis-and-repair results in the technical report use a later
+step-9000 experimental lineage. They must not be attributed to the currently
+released base-5000 or SFT-5000 checkpoints. The exact step-9000 checkpoint
+repositories will be linked here after their Hub release and restore check.
 
 ## Status
 
